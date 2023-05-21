@@ -32,6 +32,6 @@ cancel.addEventListener("click", () => {
   }
 });
 /* TODO
-Add blank modal to html, then add all the data that the user inputs through javascript
 Add function to make delete-modal appear
+Add blank modal to html, then add all the data that the user inputs through javascript
 */

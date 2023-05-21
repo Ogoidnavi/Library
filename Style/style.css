@@ -157,11 +157,11 @@ button{
   box-shadow: 0px 0px 25px rgb(65, 0, 65);
   border-radius: 20px;
   overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.7)
 }
 
 .modal-content{
   padding: 40px;
-  background-color: rgba(51, 51, 51, 0.7);
 }
 
 .modal-title{
@@ -207,7 +207,10 @@ input{
   background-color: rgba(0, 0, 0, 0);
   border: 0;
   border-bottom: 1px solid black;
-  outline-width: 0;
+}
+
+input:focus{
+  outline: none;
 }
 
 /*Sliding checkbox styling*/
@@ -262,6 +265,40 @@ button[type=reset]{
 button[type=submit]{
   background-color: rgb(0, 110, 0);
 }
+
+/* Button pressing animation*/
+button[type=reset]:hover{
+  background-color: rgb(70, 0, 0);
+}
+
+button[type=reset]:active{
+  background-color: rgb(70, 0, 0);
+  transform: translateY(2px);
+}
+
+button[type=submit]:hover{
+  background-color: rgb(0, 55, 0);
+}
+
+button[type=submit]:active{
+  background-color: rgb(0, 55, 0);
+  transform: translateY(2px);
+}
+/*End*/
+
+/*input[type = number] hiding arrows*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*End*/
 
 .display-none{
   display: none;
