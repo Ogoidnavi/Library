@@ -47,7 +47,7 @@
       <div class="modal-container">
         <div class="modal-title"><h2>Book Information</h2></div>
         <div class="modal-content">
-          <form action="" method="post">
+          <form action="" id="bookForm">
             <ul>
               <li>
                 <label for="name">Name of the book</label>
@@ -67,12 +67,14 @@
                 <label for="switch"></label>
               </li>
             </ul>
+        </div>
+            <div class="buttons">
+              <button class="options" type="reset">Cancel</button>
+              <button id="submitButt" class="options" type="submit">
+                Add Book
+              </button>
+            </div>
           </form>
-        </div>
-        <div class="buttons">
-          <button class="options" type="reset">Cancel</button>
-          <button class="options" type="submit">Add Book</button>
-        </div>
       </div>
     </div>
     <div id="delete-modal" class="modal-delete-all-books display-none">
@@ -83,7 +85,7 @@
         </div>
         <div class="buttons">
           <button class="options" type="reset">No</button>
-          <button class="options" type="submit">Yes</button>
+          <button id="yes" class="options" type="submit">Yes</button>
         </div>
       </div>
     </div>

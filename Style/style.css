@@ -41,6 +41,15 @@ button{
   background-color: blueviolet;
 }
 
+.log-button:hover{
+  background-color: rgb(80, 25, 140);
+}
+
+.log-button:active{
+  background-color: rgb(80, 25, 140);
+  transform: translateY(2px);
+}
+
 .book-display{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -258,30 +267,38 @@ label[for = switch]:active:after {
 
 /*End*/
 
-button[type=reset]{
+button[type = reset]{
   background-color: rgb(140, 0, 0);
 }
 
-button[type=submit]{
+button[type = submit]{
   background-color: rgb(0, 110, 0);
 }
 
 /* Button pressing animation*/
-button[type=reset]:hover{
+button[type = reset]:hover{
   background-color: rgb(70, 0, 0);
 }
 
-button[type=reset]:active{
+button[type = reset]:active{
   background-color: rgb(70, 0, 0);
   transform: translateY(2px);
 }
 
-button[type=submit]:hover{
+button[type = submit]:hover{
   background-color: rgb(0, 55, 0);
 }
 
-button[type=submit]:active{
+button[type = submit]:active{
   background-color: rgb(0, 55, 0);
+  transform: translateY(2px);
+}
+
+#delete-books:hover{
+  background-color: rgb(105, 25, 25);
+}
+
+#delete-books:active{
   transform: translateY(2px);
 }
 /*End*/
