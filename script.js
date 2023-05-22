@@ -1,7 +1,7 @@
 const addButton = document.querySelector(".add-book");
 const deleteButt = document.getElementById("delete-books");
 const cancel = document.querySelectorAll("button[type = reset]");
-const displayInfo = document.getElementById("book-modal");
+const displayInfo = document.getElementById("book-info-modal");
 const deleteAll = document.getElementById("delete-modal");
 const yesButt = document.getElementById("yes");
 const submitButt = document.getElementById("submitButt");
@@ -51,10 +51,24 @@ yesButt.addEventListener("click", () => {
 bookForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // handle submit
+  const bookName = document.getElementById("name");
+  const author = document.getElementById("author");
+  const numberPages = document.getElementById("pages");
+  const beenRead = document.getElementById("check");
+
+  const myBook = new Book(
+    bookName.value,
+    author.value,
+    numberPages.value,
+    beenRead.checked
+  );
+
+  myLibrary.push(myBook);
+  displayLibrary();
 });
 
+function displayLibrary() {}
+
 /* TODO
-Add function to make delete-modal appear
 Add blank modal to html, then add all the data that the user inputs through javascript
 */

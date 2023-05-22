@@ -16,6 +16,20 @@
         <button class="log-button">Sign in</button>
       </div>
       <div class="book-display">
+        <div id="book-modal" class="book-modal">
+          <div class="modal-container">
+            <div class="modal-content">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="buttons">
+              <button class="options" type="reset">Remove</button>
+              <button id="yes" class="options" type="submit">Edit</button>
+            </div>
+          </div>
+        </div>
         <div class="add-book">
           <img id="plus" src="./SVG/plus-icon.svg" alt="" />
         </div>
@@ -26,11 +40,11 @@
           <div class="element-cont">
             <div>
               Books
-              <div id="books"></div>
+              <div id="books">None</div>
             </div>
             <div>
               Completed books
-              <div id="read-books"></div>
+              <div id="read-books">None</div>
             </div>
           </div>
         </div>
@@ -43,7 +57,7 @@
         <div class="maker">Made by Ogoidnavi</div>
       </div>
     </div>
-    <div id="book-modal" class="modal-info-book display-none">
+    <div id="book-info-modal" class="modal-info-book display-none">
       <div class="modal-container">
         <div class="modal-title"><h2>Book Information</h2></div>
         <div class="modal-content">
@@ -62,9 +76,8 @@
                 <input type="number" name="pages" id="pages" required />
               </li>
               <li>
-                Not Read
-                <input type="checkbox" id="switch" />
-                <label for="switch"></label>
+                <input class="checkbox-spin" type="checkbox" id="check"/>
+                <label for="check"><span></span>Read</label>
               </li>
             </ul>
         </div>
