@@ -16,20 +16,23 @@
         <button class="log-button">Sign in</button>
       </div>
       <div class="book-display">
-        <div id="book-modal" class="book-modal">
+        <!--beginning--><div id="book-modal" class="book-modal">
           <div class="modal-container">
             <div class="modal-content">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div class="bookName"></div>
+              <div class="bookAuthor"></div>
+              <div class="bookPages"></div>
+              <div class="bookRead">
+                <input class="checkbox-spin" type="checkbox" id="firstCheck"/>
+                <label id="firstLabel" for="firstCheck"><span></span>Read</label>
+              </div>
             </div>
             <div class="buttons">
               <button class="options" type="reset">Remove</button>
               <button id="yes" class="options" type="submit">Edit</button>
             </div>
           </div>
-        </div>
+        </div><!--end-->
         <div class="add-book">
           <img id="plus" src="./SVG/plus-icon.svg" alt="" />
         </div>
@@ -76,8 +79,8 @@
                 <input type="number" name="pages" id="pages" required />
               </li>
               <li>
-                <input class="checkbox-spin" type="checkbox" id="check"/>
-                <label for="check"><span></span>Read</label>
+                <input class="checkbox-spin" type="checkbox" id="secondCheck"/>
+                <label for="secondCheck"><span></span>Read</label>
               </li>
             </ul>
         </div>
