@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="./Style/normalize.css" />
     <link rel="stylesheet" href="./Style/style.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -23,13 +23,12 @@
               <div class="bookAuthor"></div>
               <div class="bookPages"></div>
               <div class="bookRead">
-                <input class="checkbox-spin" type="checkbox" id="firstCheck"/>
-                <label id="firstLabel" for="firstCheck"><span></span>Read</label>
+                <div class="clickRead" id="clickable">Book Read</div>
               </div>
             </div>
             <div class="buttons">
               <button class="options" type="reset">Remove</button>
-              <button id="yes" class="options" type="submit">Edit</button>
+              <button class="options" type="submit">Edit</button>
             </div>
           </div>
         </div><!--end-->
@@ -97,7 +96,7 @@
       <div class="modal-container">
         <div class="modal-title"><h2>Delete all Books</h2></div>
         <div class="modal-content">
-          <h2>Are you sure that you wish to dele all books?</h2>
+          <h2>Are you sure that you wish to delete all books?</h2>
         </div>
         <div class="buttons">
           <button class="options" type="reset">No</button>
