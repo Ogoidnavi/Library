@@ -1,331 +1,338 @@
-:root{
-  --checkboxColor: rgb(0, 100, 0);
+:root {
+	--checkboxColor: rgb(0, 100, 0);
+	--purpleBackground: rgb(80, 25, 140);
+	--borderLine: 2px solid rgba(0, 0, 0, 0.4);
 }
 
-*{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: white;
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+		sans-serif;
+	color: white;
 }
 
-body{
-  background-image: linear-gradient(210deg, rgb(61, 19, 61), black);
-  min-height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+body {
+	background-image: linear-gradient(210deg, rgb(61, 19, 61), black);
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
-.container{
-  display: grid;
-  width: 100%;
-  grid-template: 100px 1fr / 1fr 360px;
+.container {
+	display: grid;
+	width: 100%;
+	grid-template: 100px 1fr / 1fr 360px;
 }
 
-.header{
-  grid-column: 1 / 3;
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-  padding: 20px;
-  align-items: center;
+.header {
+	grid-column: 1 / 3;
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	padding: 20px;
+	align-items: center;
 }
 
-.header > div:first-child{
-  font-size: 3.5rem;
-  font-weight: bolder;
+.header > div:first-child {
+	font-size: 3.5rem;
+	font-weight: bolder;
 }
 
-button{
-  border-radius: 5px;
-  border: none;
-  height: fit-content;
-  padding: 10px 25px;
+button {
+	border-radius: 5px;
+	border: none;
+	padding: 10px 25px;
 }
 
-.log-button{
-  background-color: blueviolet;
+.log-button {
+	background-color: blueviolet;
 }
 
-.log-button:hover{
-  background-color: rgb(80, 25, 140);
+.log-button:hover {
+	background-color: var(--purpleBackground);
 }
 
-.log-button:active{
-  background-color: rgb(80, 25, 140);
-  transform: translateY(2px);
+.log-button:active {
+	background-color: var(--purpleBackground);
+	transform: translateY(2px);
 }
 
-.book-display{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-flow: row;
-  justify-items: center;
-  margin: 40px;
-  gap: 40px 15px;
+.book-display {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-flow: row;
+	justify-items: center;
+	margin: 40px;
+	gap: 40px 15px;
 }
 
-.add-book{
-  transform: scale(0.5);
-  display: grid;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 4px 10px rgba(65, 50, 65, 0.7);
-  border-radius: 10px;
-  height: 300px;
-  width: 250px;
-  animation: appear 1s ease-in-out;
+.add-book {
+	transform: scale(0.5);
+	display: grid;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 4px 10px rgba(65, 50, 65, 0.7);
+	border-radius: 10px;
+	height: 300px;
+	width: 250px;
+	animation: appear 1s ease-in-out;
+	transition: transform 1s ease-in-out;
 }
 
-.add-book:hover{
-  transform: scale(1);
-  background-color: rgba(20, 130, 35, 0.3);
-  transition-duration: 1s;
+.add-book:hover {
+	transform: scale(1);
+	background-color: rgba(20, 130, 35, 0.3);
+	transition-duration: 1s;
 }
 
-.add-book:hover > #plus{
-  transform: rotate(180deg);
-  transition-duration: 2s;
+.add-book:hover > #plus {
+	transform: rotate(180deg);
+	transition-duration: 1.5s;
 }
 
-#plus{
-  font-size: 20rem;
-  transition-duration: 1.2s;
-  position: relative;
-  justify-self: center;
-  vertical-align: baseline;
-  align-self: center;
-  
+#plus {
+	font-size: 20rem;
+	transition: transform 1.2s ease-in-out;
+	position: relative;
+	justify-self: center;
+	vertical-align: baseline;
+	align-self: center;
 }
 
-.sidebar{
-  display: grid;
-  background-color: rgb(69, 67, 85);
-  justify-items: center;
-  padding: 40px 0px;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 100px;
-  width: 360px;
+.sidebar {
+	display: grid;
+	background-color: rgb(69, 67, 85);
+	justify-items: center;
+	padding: 40px 0px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	top: 100px;
+	width: 360px;
 }
 
-.sidebar > .element{
-  width: 80%;
-  border-top: 2px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-  height: fit-content;
+.sidebar > .element {
+	width: 80%;
+	border-top: var(--borderLine);
+	border-bottom: var(--borderLine);
+	height: fit-content;
 }
 
-.element > h2{
-  padding: 0.5rem 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  text-align: center;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
+.element > h2 {
+	padding: 0.5rem 0px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	text-align: center;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
 }
 
-.element-cont{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px 0px;
+.element-cont {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px 0px;
 }
 
-.element-cont > div{
-  display: flex;
-  justify-content: space-between;
+.element-cont > div {
+	display: flex;
+	justify-content: space-between;
 }
 
-#delete-books{
-  background-color: brown;
-  width: fit-content;
-  align-self: center;
+#delete-books {
+	background-color: brown;
+	width: fit-content;
+	align-self: center;
 }
 
-.maker{
-  text-align: center;
-  width: 50%;
-  border-top: 2px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-  height: fit-content;
-  align-self: end;
+.maker {
+	text-align: center;
+	width: 50%;
+	border-top: var(--borderLine);
+	border-bottom: var(--borderLine);
+	height: fit-content;
+	align-self: end;
 }
 
-.modal-info-book, 
-.modal-delete-all-books{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.modal-info-book,
+.modal-delete-all-books {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
-.modal-container{
-  display: grid;
-  box-shadow: 0px 0px 25px rgb(65, 0, 65);
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: rgba(51, 51, 51, 0.7)
+.modal-container {
+	display: grid;
+	box-shadow: 0px 0px 25px rgb(65, 0, 65);
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: rgba(51, 51, 51, 0.7);
 }
 
-.modal-content{
-  padding: 40px;
+.modal-content {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
 }
 
-.modal-title{
-  background-color: rgb(70, 15, 120);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.modal-title {
+	background-color: rgb(70, 15, 120);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
 }
 
-ul{
-  list-style: none;
-  display: grid;
-  grid-template-rows: repeat(4, 2rem);
-  gap: 10px;
-  grid-auto-flow: row;
-  align-items: center;
-  padding-inline-start: 0;
+ul {
+	list-style: none;
+	display: grid;
+	grid-template-rows: repeat(4, 2rem);
+	gap: 10px;
+	grid-auto-flow: row;
+	align-items: center;
+	padding-inline-start: 0;
 }
 
-ul > li:not(:last-child){
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+ul > li:not(:last-child) {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
 }
 
-ul > li:last-child{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+ul > li:last-child {
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
-.buttons{
-  display: flex;
+.buttons {
+	display: flex;
 }
 
-.options{
-  width: 50%;
-  border-radius: 0;
+.options {
+	width: 50%;
+	border-radius: 0;
 }
 
-input{
-  background-color: rgba(0, 0, 0, 0);
-  border: 0;
-  border-bottom: 1px solid black;
+input {
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	border-bottom: 1px solid black;
 }
 
-input:focus{
-  outline: none;
+input:focus {
+	outline: none;
 }
 
 /* Sliding checkbox styling credit to https://alvarotrigo.com/blog/css-checkbox-styles/ */
 
 .checkbox {
-  margin: 15px;
+	margin: 15px;
 }
 
 .checkbox-spin {
-  display:none;
+	display: none;
 }
 
-.checkbox-spin + label span{
-  display:inline-block;
-  width:25px;
-  height:19px;
-  margin: 0 5px -4px 0; /*layout relationship between check and label*/
+.checkbox-spin + label span {
+	display: inline-block;
+	width: 25px;
+	height: 19px;
+	margin: 0 5px -4px 0; /*layout relationship between check and label*/
 }
 
 .checkbox-spin + label span:before,
 .checkbox-spin + label span:after {
-    transition: all .3s ease-in-out;
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 1rem;
-    height: 1rem;
-    background: transparent;
-    border: 2px solid var(--checkboxColor); 
-  }
+	transition: all 0.3s ease-in-out;
+	content: '';
+	position: absolute;
+	z-index: 1;
+	width: 1rem;
+	height: 1rem;
+	background: transparent;
+	border: 2px solid var(--checkboxColor);
+}
 
 .checkbox-spin + label span:after {
-  z-index: 0;
-  border: none;
+	z-index: 0;
+	border: none;
 }
 
 .checkbox-spin:checked + label span:before {
-   transform: rotateZ(180deg);
-   background: var(--checkboxColor);
+	transform: rotateZ(180deg);
+	background: var(--checkboxColor);
 }
 
 /*End*/
 
-button[type = reset]{
-  background-color: rgb(140, 0, 0);
+button[type='reset'] {
+	background-color: rgb(140, 0, 0);
 }
 
-button[type = submit]{
-  background-color: rgb(0, 110, 0);
+button[type='submit'] {
+	background-color: rgb(0, 110, 0);
 }
 
 /* Button pressing animation*/
-button[type = reset]:hover{
-  background-color: rgb(70, 0, 0);
+button[type='reset']:hover {
+	background-color: rgb(70, 0, 0);
 }
 
-button[type = reset]:active{
-  background-color: rgb(70, 0, 0);
-  transform: translateY(2px);
+button[type='reset']:active {
+	transform: translateY(2px);
 }
 
-button[type = submit]:hover{
-  background-color: rgb(0, 55, 0);
+button[type='submit']:hover {
+	background-color: rgb(0, 55, 0);
 }
 
-button[type = submit]:active{
-  background-color: rgb(0, 55, 0);
-  transform: translateY(2px);
+button[type='submit']:active {
+	transform: translateY(2px);
 }
 
-#delete-books:hover{
-  background-color: rgb(105, 25, 25);
+#delete-books:hover {
+	background-color: rgb(105, 25, 25);
 }
 
-#delete-books:active{
-  transform: translateY(2px);
+#delete-books:active {
+	transform: translateY(2px);
 }
 /*End*/
+
+.bookName {
+	width: 100%;
+}
 
 /*input[type = number] hiding arrows*/
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+input[type='number'] {
+	-moz-appearance: textfield;
 }
 /*End*/
 
-.display-none{
-  display: none;
+.display-none {
+	display: none;
 }
 
 @keyframes appear {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

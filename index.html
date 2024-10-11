@@ -16,22 +16,6 @@
         <button class="log-button">Sign in</button>
       </div>
       <div class="book-display">
-        <!--beginning--><div id="book-modal" class="book-modal">
-          <div class="modal-container">
-            <div class="modal-content">
-              <div class="bookName"></div>
-              <div class="bookAuthor"></div>
-              <div class="bookPages"></div>
-              <div class="bookRead">
-                <div class="clickRead" id="clickable">Book Read</div>
-              </div>
-            </div>
-            <div class="buttons">
-              <button class="options" type="reset">Remove</button>
-              <button class="options" type="submit">Edit</button>
-            </div>
-          </div>
-        </div><!--end-->
         <div class="add-book">
           <img id="plus" src="./SVG/plus-icon.svg" alt="" />
         </div>
@@ -61,7 +45,9 @@
     </div>
     <div id="book-info-modal" class="modal-info-book display-none">
       <div class="modal-container">
-        <div class="modal-title"><h2>Book Information</h2></div>
+        <div class="modal-title">
+            <h2>Book Information</h2>
+        </div>
         <div class="modal-content">
           <form action="" id="bookForm">
             <ul>
@@ -78,7 +64,7 @@
                 <input type="number" name="pages" id="pages" required />
               </li>
               <li>
-                <input class="checkbox-spin" type="checkbox" id="secondCheck"/>
+                <input class="checkbox-spin" name="read" type="checkbox" id="secondCheck"/>
                 <label for="secondCheck"><span></span>Read</label>
               </li>
             </ul>
@@ -94,7 +80,9 @@
     </div>
     <div id="delete-modal" class="modal-delete-all-books display-none">
       <div class="modal-container">
-        <div class="modal-title"><h2>Delete all Books</h2></div>
+        <div class="modal-title">
+            <h2>Delete all Books</h2>
+        </div>
         <div class="modal-content">
           <h2>Are you sure that you wish to delete all books?</h2>
         </div>
